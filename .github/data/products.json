@@ -1,5 +1,5 @@
 {
-    "products":[
+    "products" : [
         {
             "id": 1,
             "name":" Dazzling Red",
@@ -24,7 +24,7 @@
             "id": 3,
             "name": "Aqua Princess",
             "image": "",
-            "description":"Feminine and unique, pair with your perfect party outfit.",
+            "description":" Feminine and unique, pair with your perfect party outfit.",
             "options": [],
             "filters": {
                 "colors": ["blue", "green", "white"],

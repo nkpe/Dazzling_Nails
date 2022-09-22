@@ -1,3 +1,6 @@
 # press_on_nails_website
  
-CMS (Content management system) for creating product pages
+running locally 
+
+python -m http.server
+.\ngrok http 8000 
