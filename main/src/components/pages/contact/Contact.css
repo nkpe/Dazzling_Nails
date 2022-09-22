@@ -1,0 +1,53 @@
+#contactleft div {
+    padding-bottom: 120px;
+}
+
+#contactright {
+    background: #ebc8cee8;
+    position: relative;
+}
+
+#contactright #contactform {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    row-gap: 10px;
+    transform: skewX(10deg);
+    width: 100%;
+    height: 75%;
+}
+
+#contactright #contactform .form-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+}
+
+#contactright #contactform input,
+#contactright #contactform select,
+#contactright #contactform textarea,
+#contactright #bespokeform input,
+#contactright #bespokeform select,
+#contactright #bespokeform textarea {
+    font-family: Quicksand;
+    font-size: 22px;
+    opacity: 60%;
+    border: 0;
+    width: 25%;
+    min-width: 250px;
+    height: 30px;
+    padding: 0;
+}
+
+#contactright form #contact-message {
+    min-width: 510px;
+    width: calc(50% + 12px);
+    height: 210px;
+    text-align: start;
+    resize: none;
+}

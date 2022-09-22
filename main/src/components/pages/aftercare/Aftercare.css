@@ -1,0 +1,40 @@
+#carepage {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+}
+
+#carepage #careleft div {
+    font-size: 4.5vw;
+    position: relative;
+    z-index: 1000;
+    top: 15%;
+    left: 50%;
+    margin-left: -52%;
+    height: fit-content;
+    width: 100%;
+    color: rgb(63, 63, 63);
+    transform: skewX(10deg);
+    margin-bottom: 100px;
+}
+
+#carepage #careright {
+    background: #ebc8cee8;
+}
+
+#carepage #careright #care-text {
+    position: absolute;
+    height: fit-content;
+    width: 60%;
+    transform: skewX(10deg);
+    top: 5%;
+    right: 22%;
+}
+
+#carepage #careright #care-text ul li {
+    text-align: left;
+}
+
+#carepage #careright #removal-text {
+    display: none;
+}
