@@ -1,0 +1,43 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 20px;
+    z-index: 1000;
+    width: 100%;
+    font-size: 13px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer div ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer #footer-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 20px;
+}
+
+footer #footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer li {
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+footer li,
+footer .fab:hover {
+    cursor: pointer;
+}
+
+footer #footer-bottom .fab {
+    font-size: 40px;
+}
