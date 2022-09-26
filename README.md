@@ -105,7 +105,9 @@ Assistance came from W3 schools, CSS Tricks and Stackoverflow posts in learning 
 
 ## **Media**
 
-Unsplash
+The product images provided by [Dazzling Nails](https://www.instagram.com/dazzlingnailsco/).
+All other images are from [unsplash](https://unsplash.com/).
+
 
 ## **Acknowledgements**
 * Thank you to my sister for providing me with the content from her small business. 
