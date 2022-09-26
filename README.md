@@ -9,16 +9,22 @@ The user interface has been designed to be simple, contemporary yet bold. The na
 The footer contains links to all webpages, covering the links included in the nav bar and extending this with further information the user could need.
 
 Each webpage has been designed for one purpose - whether this is to display one topic of information, products or contact information. This is to avoid overwhelming the user with too much information, making each web page easy to navigate and read.
-## Home Page
+## **Home Page**
 The Home page has been divided into 3 sections; the right most section has been divided into two. This layout creates 4 clearly defined sections. The sizing of each provides hierarchy on the page, allowing the business to display content on relevancy.
 
 The current Home sections include: 
 * Collections - user navigates to collections page. This is displayed on the left in a large section, as it is an important page for the business.
 * New Season - regular users can navigate quickly to the newest and on trend items. This is positioned centrally so it is the user's first focus.
 * Blog and Size Guide - smaller sized sections, as they contain less important than the main products.
-## **Collections Page**
-Clean layout so the focus is on the collections. 
-# **Features**
+## **Collections and All Products Pages**
+Clean layout so the focus is on the collections. Layout created using CSS Flexbox to add responsiveness. 
+Simple, clear filters included on the main / all products page. Achieved through HTML classes and Javascript.
+
+## **Contact Page**
+Form styled using CSS to keep the with the simple, contemporary styling. Placeholders used to show the user what information is required in each field. 
+
+NodeParser and Express used to parse the form values into and email which is sent to the business owners own email address so they are always up to date with new for submissions. 
+<!-- # **Features**
 ## **All Pages**
 * **How to icon** -  sits within the header so it is accessible anywhere on the site. 
 
@@ -32,14 +38,12 @@ Clean layout so the focus is on the collections.
 * **Cards** - bootstrap card component used to create each card in the game.
 
 ## **#learn-page**
-* **Bootstrap Grid** - to create a responsive and clean layout of the content.
+* **Bootstrap Grid** - to create a responsive and clean layout of the content. -->
 
 # **Features to be implemented**
-* **Countdown timer option** - where game times out if the user takes too long to complete the game.
-* **Animations** - flip animations on the cards.
-* **Levels** - easy to hard. Harder levels = more pairs to do. This will allow all the cocktails from the 'learn' page to be played within the game.
-* **Feedback Page** - for the user to send feedback about the website and game, in case any bugs / issues occur.
-* **High Scores** - so the user can see how quickly they have completed the game and increase re-playability.
+* **Converting from a single HTML file to a React based website** - to easily implement and maintain the product pages.
+* **Product Pages** - individual product pages
+* **Product Database** - a product database to populate individual product pages.
 
 # **Technologies used**
 * **HTML 5** - used to create the basic content of the website.
