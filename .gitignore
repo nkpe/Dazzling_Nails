@@ -4,3 +4,4 @@ public/lib/*
 *.ai
 *.log
 footerwriting_/
+node_modules
