@@ -102,7 +102,7 @@ Assistance came from W3 schools, CSS Tricks and Stackoverflow posts in learning 
 
 ## **Content**
 
-
+The main content for the website was provided by [Dazzling Nails](https://www.instagram.com/dazzlingnailsco/).
 ## **Media**
 
 The product images provided by [Dazzling Nails](https://www.instagram.com/dazzlingnailsco/).
