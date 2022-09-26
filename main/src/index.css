@@ -3,3 +3,7 @@ body {
   height: 100%;
   font-family: 'Quicksand', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}

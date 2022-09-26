@@ -1,5 +1,6 @@
 import React from "react";
 import './Home.css';
+import {Link} from 'react-router-dom';
 
 import newIn from '../../../images/new_in.jpg';
 import blog from '../../../images/blog.jpg';
@@ -9,10 +10,10 @@ import collection from '../../../images/collec_glitter.jpg';
 export default function Home() {
     return (
         <section id="homepage" className="page">
-            <div id="lefthome" className="home-shape collec-glitter allproduct-btn">
+            <Link to="/collections" id="lefthome" className="home-shape collec-glitter allproduct-btn">
                 <img src={collection} alt="Glitter Collection" />
                 <div id="lefthome-text" className="home-text">GLITTER NAILS</div>
-            </div>
+            </Link>
 
             <div className="home-shape-divider"></div>
 
@@ -36,11 +37,10 @@ export default function Home() {
             </div>
 
             <div id="righthome" className="home-shape">
-                <div id="toprighthome-text" className="home-text">BLOG</div>
-
-                <div id="toprighthome" className="blog-btn">
+                <a href="https://www.instagram.com/dazzlingnailsco/" target="_blank" rel="noopener noreferrer" id="toprighthome" className="blog-btn">
+                    <div id="toprighthome-text" className="home-text">BLOG</div>
                     <img src={blog} alt="Blog" />
-                </div>
+                </a>
 
                 <div id="bottomrighthome" className="uniquesize-btn">
                     <div id="bottomrighthome-text" className="home-text">SIZE GUIDE</div>
