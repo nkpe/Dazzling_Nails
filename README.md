@@ -102,12 +102,12 @@ Assistance came from W3 schools, CSS Tricks and Stackoverflow posts in learning 
 
 ## **Content**
 
-The main content for the website was provided by [Dazzling Nails](https://www.instagram.com/dazzlingnailsco/).
+The main content for the website was provided by Dazzling Nails who have since rebranded to [Heavenly Luxe](https://www.instagram.com/heavenly.luxe/).
 ## **Media**
 
-The product images provided by [Dazzling Nails](https://www.instagram.com/dazzlingnailsco/).
+The product images provided by Dazzling Nails who have since rebranded to [Heavenly Luxe] (https://www.instagram.com/heavenly.luxe/).
 All other images are from [unsplash](https://unsplash.com/).
 
 
 ## **Acknowledgements**
-* Thank you to my sister for providing me with the content from her small business. 
+* Thank you to Heavenly Luxe for providing me with the content from their small business. 
