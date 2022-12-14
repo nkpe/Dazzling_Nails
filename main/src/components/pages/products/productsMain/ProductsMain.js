@@ -1,7 +1,25 @@
 import React from "react";
 import './ProductsMain.css';
+import aquaPrincessImg from '../../../../images/products/aqua_princess.jpg';
+import blkLeoPImg from '../../../../images/products/black_leopard_print.jpg';
+import dazzSquImg from '../../../../images/products/dazzling_square.jpg';
+import fancFushImg from '../../../../images/products/fancy_fushia.jpg';
+import gMarbMadImg from '../../../../images/products/g.p_glitter_marble_madness.jpg';
+import greGoldImg from '../../../../images/products/green_gold.jpg';
+// import lovLifeImg from '../../../../images/products/loving_life.jpg';
+import matNeoOraImg from '../../../../images/products/matt_neon_orange.jpg';
+import matTanGliImg from '../../../../images/products/matt_tan_glitter_gem.jpg';
+import nudeSpeckImg from '../../../../images/products/nude_speckle.jpg';
+import plPinkMarbMadImg from '../../../../images/products/pale_pink_marble_madness.jpg';
+import pinkFlwrPwrImg from '../../../../images/products/pink_flower_power.jpg';
+import prplPartyImg from '../../../../images/products/purple_party.jpg';
+import prplPassImg from '../../../../images/products/purple_passion.jpg';
+import redOpalVelvImg from '../../../../images/products/red_opal_velvet.jpg';
+import roseGoldMarbImg from '../../../../images/products/rose_gold_marble.jpg';
+import toneGreySandImg from '../../../../images/products/two_tone_grey_sand.jpg';
 
 const ProductsMain = () => {
+	
     return (
         <section id="allproductspage" className="page longpage">
 				<div id="product-pg-container">
@@ -41,67 +59,67 @@ const ProductsMain = () => {
 
 					<div id="product-container">
 						<div className="product-item gemstone glitter red">
-							<img src="public/images/products/dazzling_square.jpg" />
+							<img src={dazzSquImg} alt="Red glittery nails with gemstones in square shape" />
 							<span className="product-label">Dazzling Square</span>
 						</div>
 						<div className="product-item animal brown">
-							<img src="public/images/products/black_leopard_print.jpg" />
+							<img src={blkLeoPImg} alt="Leopard spots print in black" />
 							<span className="product-label">Black Leopard Print</span>
 						</div>
 						<div className="product-item gemstone white blue">
-							<img src="public/images/products/aqua_princess.jpg" />
+							<img src={aquaPrincessImg} alt="Aqua and white Princess style nails with gemstones" />
 							<span className="product-label">Aqua Princess</span>
 						</div>
 						<div className="product-item gemstone glitter marble white pink grey">
-							<img src="public/images/products/g.p_glitter_marble_madness.jpg" />
+							<img src={gMarbMadImg} alt="White and Grey marble with Pink nails, including gemstones" />
 							<span className="product-label">Glitter Marble Madness</span>
 						</div>
 						<div className="product-item gemstone glitter blue brown">
-							<img src="public/images/products/green_gold.jpg" />
+							<img src={greGoldImg} alt="Gold and green glittery nails" />
 							<span className="product-label">Green Gold</span>
 						</div>
 						<div className="product-item glitter pink">
-							<img src="public/images/products/fancy_fushia.jpg" />
+							<img src={fancFushImg} alt="Glittery fushia nails" />
 							<span className="product-label">Fancy Fushia</span>
 						</div>
 						<div className="product-item summer seasonal yellow">
-							<img src="public/images/products/matt_neon_orange.jpg" />
+							<img src={matNeoOraImg} alt="Neon Orange nails with matt finish" />
 							<span className="product-label">Matt Neon Orange</span>
 						</div>
 						<div className="product-item gemstone glitter brown">
-							<img src="public/images/products/matt_tan_glitter_gem.jpg" />
+							<img src={matTanGliImg} alt="Tan nails with gold glitter and gemstones" />
 							<span className="product-label">Matt Tan Glitter Gem</span>
 						</div>
 						<div className="product-item glitter white pink">
-							<img src="public/images/products/nude_speckle.jpg" />
+							<img src={nudeSpeckImg} alt="Nude nails with monochrome speckles" />
 							<span className="product-label">Nude Speckle</span>
 						</div>
 						<div className="product-item marble white pink grey">
-							<img src="public/images/products/pale_pink_marble_madness.jpg" />
+							<img src={plPinkMarbMadImg} alt="Pale pink and grey marble nails" />
 							<span className="product-label">Pale Pink Marble Madness</span>
 						</div>
 						<div className="product-item gemstone glitter white pink gold">
-							<img src="public/images/products/pink_flower_power.jpg" />
+							<img src={pinkFlwrPwrImg} alt="Pink flower nails with gold glitter" />
 							<span className="product-label">Pink Flower Power</span>
 						</div>
 						<div className="product-item glitter pink">
-							<img src="public/images/products/purple_party.jpg" />
+							<img src={prplPartyImg} alt="Purple nails with chunky glitter" />
 							<span className="product-label">Purple Party</span>
 						</div>
 						<div className="product-item gemstone glitter marble pink grey">
-							<img src="public/images/products/purple_passion.jpg" />
+							<img src={prplPassImg} alt="Purple and silver marble nails" />
 							<span className="product-label">Purple Passion</span>
 						</div>
 						<div className="product-item gemstone glitter red">
-							<img src="public/images/products/red_opal_velvet.jpg" />
+							<img src={redOpalVelvImg} alt="Red nails with velvet finish and opal bow gem" />
 							<span className="product-label">Red Opal Velvet</span>
 						</div>
 						<div className="product-item glitter marble pink">
-							<img src="public/images/products/rose_gold_marble.jpg" />
+							<img src={roseGoldMarbImg} alt="Pink nails with rose gold marble pattern" />
 							<span className="product-label">Rose Gold Marble</span>
 						</div>
 						<div className="product-item glitter grey">
-							<img src="public/images/products/two_tone_grey_sand.jpg" />
+							<img src={toneGreySandImg} alt="Two grey tone nails with sand finish" />
 							<span className="product-label">Two Tone Grey Sand</span>
 						</div>
 					</div>
