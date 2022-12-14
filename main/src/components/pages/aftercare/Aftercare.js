@@ -50,3 +50,5 @@ const Aftercare = () => {
 			</section>
     )
 }
+
+export default Aftercare;
