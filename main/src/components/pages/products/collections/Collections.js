@@ -14,7 +14,7 @@ const Collections = () => {
         <h1>Nail Collections</h1>
         <div id="collec-container">
             <div className="collec-item allproduct-btn product-viewAll collec-all">
-                <img src={collectAllImg} />
+                <img src={collectAllImg} alt="All nails" />
                 <div className="collec-names">All Nails</div>
             </div>
 

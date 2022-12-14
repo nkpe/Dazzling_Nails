@@ -34,7 +34,7 @@ const Header = () => {
                     <div className="nav-divider">/</div>
                     <Link to="unique-sizes" className="nav-button design-btn">Custom</Link>
                     <div className="nav-divider">/</div>
-                    <Link to="aftecare" className="nav-button care-btn">Aftercare</Link>
+                    <Link to="aftercare" className="nav-button care-btn">Aftercare</Link>
                 </ul>
             </nav>
 

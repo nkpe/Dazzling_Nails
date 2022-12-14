@@ -12,12 +12,12 @@ const Contact = () => {
 
 
             <div id="contactright" className="rightpageshape">
-                <form id="contactform" style="display:none;" name="contactform" action="/contactSubmit" method="post" autocomplete="on">
+                <form id="contactform" name="contactform" action="/contactSubmit" method="post" autocomplete="on">
 
                     <div className="form-row">
                         <input id="input-name" type="text" name="name" placeholder="Name:" />
                         <select id="topicselect" name="topic">
-                            <option value="" disabled selected style="display:none;">Topic:</option>
+                            <option value="" disabled selected >Topic:</option>
                             <option value="order-enquiry">Order Enquiry</option>
                             <option value="existing-order">Existing Order</option>
                             <option value="delivery-enquiry">Delivery</option>
@@ -41,11 +41,11 @@ const Contact = () => {
                     </div>
                 </form>
 
-                <form id="bespokeform" style="display:none;" name="bespokeform" action="/bespokeSubmit"
+                <form id="bespokeform" name="bespokeform" action="/bespokeSubmit"
                     method="post" autocomplete="on">
                     <h1>Pack Size</h1>
                     <select id="bespoke-pk-size" name="bespoke-pk-size">
-                        <option value="" disabled selected style="display:none;">Pack Size:</option>
+                        <option value="" disabled selected >Pack Size:</option>
                         <optgroup label="Pack of 10">
                             <option value="10pk-small">Small</option>
                             <option value="10pk-medium">Medium</option>
@@ -60,7 +60,7 @@ const Contact = () => {
                     <input id="10pk-customsize" type="text" name="10pk-custom-size"
                         placeholder="Enter custom sizes here" />
                     <select id="bespoke-shape" name="bespoke-shape">
-                        <option value="" disabled selected style="display:none;">Nail Shape:</option>
+                        <option value="" disabled selected >Nail Shape:</option>
                         <option value="medium-oval">Medium Oval</option>
                         <option value="medium-coffin">Medium Coffin</option>
                         <option value="ultra-coffin">Ultra Coffin</option>
@@ -68,7 +68,7 @@ const Contact = () => {
                         <option value="ultra-stiletto">Ultra Stiletto</option>
                     </select>
                     <select id="bespoke-colour" name="bespoke-colour">
-                        <option value="" disabled selected style="display:none;">Preferred Colour:</option>
+                        <option value="" disabled selected >Preferred Colour:</option>
                         <option value="white">White</option>
                         <option value="yellow">Yellow</option>
                     </select>
