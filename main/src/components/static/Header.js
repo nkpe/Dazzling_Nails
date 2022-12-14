@@ -12,13 +12,13 @@ const mobNav = () => {
 					<input className="mob-search-full" type="text" placeholder="" />
 				</div>
 
-				<li id="mob-info-btn" className="nav-button info-btn">About</li>
+				<Link to="/about" id="mob-info-btn" className="nav-button info-btn">About</Link>
 
 				<Link to="/collections" id="mob-collections-btn" className="nav-button collections-btn">Collections</Link>
 
-				<li id="mob-design-btn" className="nav-button design-btn">Custom</li>
+				<Link to="/unique-sizes" id="mob-design-btn" className="nav-button design-btn">Custom</Link>
 
-				<li id="mob-care-btn" className="nav-button care-btn">Aftercare</li>
+				<Link to="/aftercare" id="mob-care-btn" className="nav-button care-btn">Aftercare</Link>
 			</aside>
     )
 }
@@ -28,13 +28,13 @@ const Header = () => {
         <header>
             <nav>
                 <ul>
-                    <li className="nav-button info-btn">About</li>
+                    <Link to="/about" className="nav-button info-btn">About</Link>
                     <div className="nav-divider">/</div>
-                    <li className="nav-button collections-btn">Collections</li>
+                    <Link to="collections" className="nav-button collections-btn">Collections</Link>
                     <div className="nav-divider">/</div>
-                    <li className="nav-button design-btn">Custom</li>
+                    <Link to="unique-sizes" className="nav-button design-btn">Custom</Link>
                     <div className="nav-divider">/</div>
-                    <li className="nav-button care-btn">Aftercare</li>
+                    <Link to="aftecare" className="nav-button care-btn">Aftercare</Link>
                 </ul>
             </nav>
 
@@ -49,3 +49,4 @@ const Header = () => {
 
 
 export default Header;
+export {mobNav};

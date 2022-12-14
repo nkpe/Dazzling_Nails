@@ -17,28 +17,28 @@ export default function Home() {
 
             <div className="home-shape-divider"></div>
 
-            <div id="midhome" className="home-shape">
+            <Link to="/collections/new-season" id="midhome" className="home-shape">
                 <img src={newIn} alt="New Season" />
                 <div id="midhome-text" className="home-text">NEW SEASON</div>
-            </div>
+            </Link>
 
             <div id="hs-div-2" className="home-shape-divider"></div>
 
-            <div id="mob-bottomlefthome" className="home-shape blog-btn">
-                <div id="mob-bottomlefthome-text" className="home-text">BLOG</div>
-                <img src={blog} alt="Blog" />
-            </div>
+            <Link to="/custom" id="mob-bottomlefthome" className="home-shape blog-btn">
+                <div id="mob-bottomlefthome-text" className="home-text">Custom</div>
+                <img src={blog} alt="Custom" />
+            </Link>
 
             <div id="mob-hs-div-2"></div>
 
-            <div id="mob-bottomrighthome" className="home-shape uniquesize-btn">
+            <Link to="/unique-sizes" id="mob-bottomrighthome" className="home-shape uniquesize-btn">
                 <div id="mob-bottomrighthome-text" className="home-text uniquesize-btn">SIZE<br />GUIDE</div>
                 <img src={sizeGuide} alt="Size Guide" />
-            </div>
+            </Link>
 
-            <div id="righthome" className="home-shape">
+            <Link id="righthome" className="home-shape">
                 <a href="https://www.instagram.com/dazzlingnailsco/" target="_blank" rel="noopener noreferrer" id="toprighthome" className="blog-btn">
-                    <div id="toprighthome-text" className="home-text">BLOG</div>
+                    <div id="toprighthome-text" className="home-text">Custom</div>
                     <img src={blog} alt="Blog" />
                 </a>
 
@@ -46,7 +46,7 @@ export default function Home() {
                     <div id="bottomrighthome-text" className="home-text">SIZE GUIDE</div>
                     <img src={sizeGuide} alt="Size Guide" />
                 </div>
-            </div>
+            </Link>
         </section>
     );
 }
