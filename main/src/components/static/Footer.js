@@ -9,12 +9,24 @@ const Footer = () => {
 		<div id="footer-top">
 			<ul>
 				<h2 className="footer-head">Help and Contact</h2>
-				<Link to="/about" className="info-btn">About Us</Link>
-				<Link to="/contact" className="contact-btn">Contact Us</Link>
-				<Link to="/unique-sizes" className="uniquesize-btn">Unique Sizes Guide</Link>
-				<Link to="/unique-sizes" className="shapeguide-btn">Shape Guide</Link>
-				<Link to="/aftercare" className="care-btn">Aftercare & Removal</Link>
-				<Link to="/faq" className="faq-btn">FAQ's</Link>
+				<li>
+					<Link to="/about" className="info-btn">About Us</Link>
+				</li>
+				<li>	
+					<Link to="/contact" className="contact-btn">Contact Us</Link>
+				</li>
+				<li>
+					<Link to="/unique-sizes" className="uniquesize-btn">Unique Sizes Guide</Link>
+				</li>
+				<li>
+					<Link to="/unique-sizes" className="shapeguide-btn">Shape Guide</Link>
+				</li>
+				<li>
+					<Link to="/aftercare" className="care-btn">Aftercare & Removal</Link>
+				</li>
+				<li>					
+					<Link to="/faq" className="faq-btn">FAQ's</Link>
+				</li>
 			</ul>
 
 			<ul>

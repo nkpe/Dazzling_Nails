@@ -1,3 +1,11 @@
+a {
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
 #page-container {
   position: relative;
   min-height: calc(100vh - 100px);

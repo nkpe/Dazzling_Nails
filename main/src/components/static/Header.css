@@ -5,10 +5,9 @@ header {
     align-items: center;
 }
 
-#cont-logo {
-    position: absolute;
+/* Logo */
+#cont-logo, #logo-link {
     height: 80px;
-    width: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,15 +18,16 @@ header {
 }
 
 
-#cont-logo img {
+#cont-logo #logo-link img {
     height: 185%;
     z-index: 1;
 }
 
-#cont-logo img:hover {
+#cont-logo #logo-link img:hover {
     cursor: pointer;
 }
 
+/* Navbar */
 header nav {
     display: block;
     position: relative;
@@ -60,26 +60,4 @@ header nav ul {
 
 .nav-divider {
     display: inline-block;
-}
-
-/* PAGES */
-#page-container {
-    position: relative;
-    min-height: calc(100vh - 100px);
-    top: 0;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    overflow: hidden;
-}
-
-#page-container #mob-nav {
-    display: none;
-}
-
-#page-container .mob-search-full {
-    background: pink;
-    width: 95%;
-    opacity: 80%;
-    z-index: 500;
 }
