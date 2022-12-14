@@ -1,11 +1,13 @@
 import React from "react";
 import './About.css';
 
+import aboutImg from '../../../images/about_us_side.jpg'
+
 const About = () => {
     return (
         <section id="aboutpage" className="page informpage">
 				<div id="aboutleft" className="leftpageshape">
-					<img src="public/images/about_us_side.jpg" alt="About Us" />
+					<img src={aboutImg}alt="About Us" />
 					<div className="leftheader">About Us</div>
 				</div>
 

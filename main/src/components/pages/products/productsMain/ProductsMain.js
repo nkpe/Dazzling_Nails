@@ -1,5 +1,6 @@
 import React from "react";
 import './ProductsMain.css';
+
 import aquaPrincessImg from '../../../../images/products/aqua_princess.jpg';
 import blkLeoPImg from '../../../../images/products/black_leopard_print.jpg';
 import dazzSquImg from '../../../../images/products/dazzling_square.jpg';

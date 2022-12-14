@@ -1,6 +1,8 @@
 import React from "react";
 import'./UniqueSizes.css';
 
+import uniqueSizeImg from '../../../images/info_unique_sizes.jpg';
+
 const UniqueSizes = () => {
     return (
         <section id="uniquesize-guide" className="page longpage">
@@ -27,7 +29,7 @@ const UniqueSizes = () => {
 
 						EXAMPLE: Left 1,4,3,5,9,1,5,3,6,8 Right
 					</p>
-					<img src="public/images/info_unique_sizes.jpg" />
+					<img src={uniqueSizeImg} alt="Dazzling Nails sizes" />
 				</article>
 			</section>
     )

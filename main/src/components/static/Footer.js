@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './Footer.css';
 
-const Footer =() => {
+const Footer = () => {
     return (
         <footer>
 		<div id="footer-top">

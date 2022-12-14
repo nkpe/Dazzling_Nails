@@ -41,7 +41,9 @@ const Header = () => {
             <div id="mob-nav-button">///</div>
 
             <div id="cont-logo" className="topbar">
-                <img src={logo} alt="Dazzling Nails Co logo" />
+                <Link to="/home" >
+                    <img src={logo} alt="Dazzling Nails Co logo" />
+                </Link>
             </div>
         </header>
     );
