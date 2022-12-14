@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import './Footer.css';
 
@@ -8,20 +9,20 @@ const Footer =() => {
 		<div id="footer-top">
 			<ul>
 				<h2 className="footer-head">Help and Contact</h2>
-				<li className="info-btn">About Us</li>
-				<li className="contact-btn">Contact Us</li>
-				<li className="uniquesize-btn">Unique Sizes Guide</li>
-				<li className="shapeguide-btn">Shape Guide</li>
-				<li className="care-btn">Aftercare & Removal</li>
-				<li className="faq-btn">FAQ's</li>
+				<Link to="/about" className="info-btn">About Us</Link>
+				<Link to="/contact" className="contact-btn">Contact Us</Link>
+				<Link to="/unique-sizes" className="uniquesize-btn">Unique Sizes Guide</Link>
+				<Link to="/unique-sizes" className="shapeguide-btn">Shape Guide</Link>
+				<Link to="/aftercare" className="care-btn">Aftercare & Removal</Link>
+				<Link to="/faq" className="faq-btn">FAQ's</Link>
 			</ul>
 
 			<ul>
 				<h2 className="footer-head">Information</h2>
-				<li className="delivery-btn">Delivery & Returns Policy</li>
-				<li className="terms-btn">T&C's</li>
-				<li>Privacy Policy</li>
-				<li>Cookie Policy</li>
+				<Link to="delivery" className="delivery-btn">Delivery & Returns Policy</Link>
+				<Link to="terms" className="terms-btn">T&C's</Link>
+				{/* <Link>Privacy Policy</Link>
+				<Link>Cookie Policy</Link> */}
 			</ul>
 		</div>
 
