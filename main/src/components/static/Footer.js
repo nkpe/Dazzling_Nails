@@ -8,7 +8,9 @@ const Footer = () => {
         <footer>
 		<div id="footer-top">
 			<ul>
-				<h2 className="footer-head">Help and Contact</h2>
+				<li>
+					<h2 className="footer-head">Help and Contact</h2>
+				</li>
 				<li>
 					<Link to="/about" className="info-btn">About Us</Link>
 				</li>
@@ -30,16 +32,22 @@ const Footer = () => {
 			</ul>
 
 			<ul>
-				<h2 className="footer-head">Information</h2>
-				<Link to="delivery" className="delivery-btn">Delivery & Returns Policy</Link>
-				<Link to="terms" className="terms-btn">T&C's</Link>
+				<li>
+					<h2 className="footer-head">Information</h2>
+				</li>
+				<li>					
+					<Link to="delivery" className="delivery-btn">Delivery & Returns Policy</Link>
+				</li>
+				<li>
+					<Link to="terms" className="terms-btn">T&C's</Link>
+				</li>
 				{/* <Link>Privacy Policy</Link>
 				<Link>Cookie Policy</Link> */}
 			</ul>
 		</div>
 
 		<div id="footer-bottom">
-			<p id="copyr">© Dazzling Nails Co 2020</p>
+			<p id="copyr">© Dazzling Nails Co 2023</p>
 			<div className="social-media">
 				<i className="fab fa-facebook fb-btn"></i>
 				<i className="fab fa-instagram blog-btn"></i>
