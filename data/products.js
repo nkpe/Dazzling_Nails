@@ -3,7 +3,7 @@
             id: 1,
             name:" Dazzling Red",
             image: "../public/images/products/dazzling_square.jpg",
-            description: "These sophisticated nails are bold and glamourous, perfect for formal events or a night out.",
+            description: "These sophisticated nails are bold and glamorous, perfect for formal events or a night out.",
             options: [],
             filters: {
                 colors: ["red", "silver"],
