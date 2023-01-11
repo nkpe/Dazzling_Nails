@@ -84,6 +84,28 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
                 colors: ["pink"],
                 collection: ["glitter"]
             }
+        },{
+            id: 7,
+            name: "Matt Neon Orange",
+            image: {matNeoOraImg},
+            alt: "Neon Orange nails with matt finish",
+            description: "",
+            options: [],
+            filters: {
+                colors: ["yellow"],
+                collection: ["summer"]
+            }
+        },{
+            id: 8,
+            name: "Matt Tan Glitter Gem",
+            image: {matTanGliImg},
+            alt: "Tan nails with gold glitter and gemstones",
+            description: "",
+            options: [],
+            filters: {
+                colors: ["brown"],
+                collection: ["glitter","gemstone"]
+            }
         }
     ]
 

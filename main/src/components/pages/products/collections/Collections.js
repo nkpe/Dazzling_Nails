@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import '../ProductsFlex.css';
+import '../ProductsLayout.css';
 import './Collections.css';
 
 import collectAllImg from '../../../../images/collec_all.jpg';

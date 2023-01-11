@@ -1,5 +1,6 @@
 import React from "react";
 import './ProductsMain.css';
+import '../ProductsLayout.css';
 import Products from "../../../../data/products";
 
 // import aquaPrincessImg from '../../../../images/products/aqua_princess.jpg';
@@ -22,7 +23,7 @@ import Products from "../../../../data/products";
 
 const ProductCard = ({prodAlt, prodImage, prodName, index}) => {
 	return (
-		<div className="product-item" key={index}>
+		<div className="product-item prod-child" key={index}>
 			<img src={prodImage} alt={prodAlt} />
 			<span className="product-label">{prodName}</span>
 		</div>
@@ -75,7 +76,7 @@ const ProductsMain = () => {
 
 				</div>
 
-				<div id="product-container">
+				<div class="prod-container">
 					{allProductCards}
 				</div>
 			</div>
