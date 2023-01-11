@@ -1,16 +1,8 @@
 /* All products sub-header */
 
 #allproductspage #filter-container {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    column-gap: 20px;
-    row-gap: 10px;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    font-size: 20px;
+    grid-template-rows: none;
+    padding-bottom: 1rem;
 }
 
 .filter-item, 
