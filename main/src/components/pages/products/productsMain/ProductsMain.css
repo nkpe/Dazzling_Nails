@@ -62,6 +62,7 @@
     width: 300px;
     overflow: hidden;
     height: 330px;
+    background-color: aqua;
 }
 
 #allproductspage #product-container .product-item img {
