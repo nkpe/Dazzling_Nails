@@ -18,7 +18,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
  
  let Products = [
         {
-            id: 1,
+            id: 100,
             name:" Dazzling Red",
             image: {dazzSquImg},
             alt: "Red glittery nails with gemstones in square shape",
@@ -30,7 +30,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             }
         }
         , {
-            id: 2,
+            id: 200,
             name: "Black Leopard Print",
             image: {blkLeoPImg},
             alt: "Leopard spots print in black",
@@ -41,7 +41,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
                 collection: ["animal"]
             }
         }, {
-            id: 3,
+            id: 300,
             name: "Aqua Princess",
             image: {aquaPrincessImg},
             alt: "Aqua and white Princess style nails with gemstones",
@@ -52,7 +52,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
                 collection: ["gemstone"]
             }
         },{
-            id: 4,
+            id: 400,
             name: "Glitter Marble Madness",
             image: {gMarbMadImg},
             alt: "White and Grey marble with Pink nails, including gemstones",
@@ -63,7 +63,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
                 collection: ["glitter", "gemstone", "marble"]
             }
         },{
-            id: 5,
+            id: 500,
             name: "Green Gold",
             image: {greGoldImg},
             alt: "Gold and green glittery nails",
@@ -74,7 +74,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
                 collection: ["glitter", "gemstone"]
             }
         },{
-            id: 6,
+            id: 600,
             name: "Fancy Fushia",
             image: {fancFushImg},
             alt: "Glittery fushia nails",
@@ -85,7 +85,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
                 collection: ["glitter"]
             }
         },{
-            id: 7,
+            id: 700,
             name: "Matt Neon Orange",
             image: {matNeoOraImg},
             alt: "Neon Orange nails with matt finish",
@@ -96,7 +96,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
                 collection: ["summer"]
             }
         },{
-            id: 8,
+            id: 800,
             name: "Matt Tan Glitter Gem",
             image: {matTanGliImg},
             alt: "Tan nails with gold glitter and gemstones",
