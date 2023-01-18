@@ -16,7 +16,7 @@ const Collections = () => {
 
             <h1>Nail Collections</h1>
 
-            <div id="collec-container" class="prod-container">
+            <div id="collec-container" className="prod-container">
                 
                 <Link to="/products">
                     <div className="prod-child allproduct-btn product-viewAll collec-all">
