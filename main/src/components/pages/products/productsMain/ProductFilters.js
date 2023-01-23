@@ -51,9 +51,9 @@ const ProductFilters = ({ collectName, collectValues }) => {
         setSelected(e.target.value);
     }
     return (
-        <div id={{collectName} + ""}> 
+        <div id={`${ collectName }-wrapper`}> 
             <label value={collectName}>{collectName}</label>
-            <select id={{ collectName } + "-filter"} className="filter-item prod-child" defaultValue={collectName} onChange={valueSelected}>
+            <select id={`${ collectName }-filter`} className="filter-item prod-child" defaultValue={collectName} onChange={valueSelected}>
                 {Array.from(collectValues).map((value, index) => {
                     return <option value={value} key={index}>{value}</option>
                 })}
@@ -65,14 +65,14 @@ const ProductFilters = ({ collectName, collectValues }) => {
 
 const ProductFilterContainer = () => {
     return (
-        <div id="filters-wrapper">
+        <>
             {filterData.map((collection, index) => {
                 let collectionName = Object.keys(collection)[0];
                 let collectionValues = collection[collectionName];
 
                 return <ProductFilters collectName={collectionName} collectValues={collectionValues} key={index} />
             })}
-        </div>
+        </>
     )
 }
 
