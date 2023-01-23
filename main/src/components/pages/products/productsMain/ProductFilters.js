@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import Products from "../../../../data/products";
 
 
@@ -43,7 +45,7 @@ const filterData = allFilterTitles()
 
 
 
-const ProductFilters = ({ collectName, collectValues }) => {
+const ProductFilters = ({ collectName, collectValues, optionSelect }) => {
 
     const [selected, setSelected] = useState(0);
     console.log(selected)
@@ -51,11 +53,11 @@ const ProductFilters = ({ collectName, collectValues }) => {
         setSelected(e.target.value);
     }
     return (
-        <div id={`${ collectName }-wrapper`}> 
-            <label value={collectName}>{collectName}</label>
-            <select id={`${ collectName }-filter`} className="filter-item prod-child" defaultValue={collectName} onChange={valueSelected}>
+        <div id={`${collectName}-wrapper`}>
+            <select id={`${collectName}-filter`} className="filter-item prod-child" defaultValue={collectName} onChange={valueSelected}>
+                <option value={collectName}>{collectName}</option>
                 {Array.from(collectValues).map((value, index) => {
-                    return <option value={value} key={index}>{value}</option>
+                    return <option value={value} key={index} onClick={optionSelect}>{value}</option>
                 })}
             </select>
         </div>
@@ -63,17 +65,35 @@ const ProductFilters = ({ collectName, collectValues }) => {
     )
 }
 
-const ProductFilterContainer = () => {
+const ProductFilterContainer = ({ optionSelect }) => {
     return (
         <>
             {filterData.map((collection, index) => {
                 let collectionName = Object.keys(collection)[0];
                 let collectionValues = collection[collectionName];
 
-                return <ProductFilters collectName={collectionName} collectValues={collectionValues} key={index} />
+                return <ProductFilters collectName={collectionName} collectValues={collectionValues} key={index} optionSelect={optionSelect} />
             })}
         </>
     )
 }
 
-export default ProductFilterContainer;
+
+const ProductViewAll = ({ viewAll }) => {
+    return (
+        <div className="inline-view-all filter-item product-viewAll prod-child">
+            <Link to="/products" className="product-viewAll" onClick={viewAll}>View All</Link>
+        </div>
+    )
+}
+
+const ProductSortBy = ({ sortByAtoZ }) => {
+    return (
+        <select id="sortby-filter" className="filter-item prod-child" defaultValue="sortby">
+            <option value="sortby">Sort By</option>
+            <option value="a-z" onClick={sortByAtoZ}>A-Z</option>
+        </select>
+    )
+}
+
+export { ProductFilterContainer, ProductViewAll, ProductSortBy };

@@ -25,8 +25,8 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description: "These sophisticated nails are bold and glamorous, perfect for formal events or a night out.",
             options: [],
             filters: {
-                colors: ["red", "silver"],
-                collection: ["glitter", "gemstone"]
+                Colour: ["red", "silver"],
+                Collection: ["glitter", "gemstone"]
             }
         }
         , {
@@ -37,8 +37,8 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description:" This on trend nail design is perfect for casual outfits.",
             options: [],
             filters: {
-                colors: ["brown", "black"],
-                collection: ["animal"]
+                Colour: ["brown", "black"],
+                Collection: ["animal"]
             }
         }, {
             id: 300,
@@ -48,8 +48,8 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description:" Feminine and unique, pair with your perfect party outfit.",
             options: [],
             filters: {
-                colors: ["blue", "green", "white"],
-                collection: ["gemstone"]
+                Colour: ["blue", "green", "white"],
+                Collection: ["gemstone"]
             }
         },{
             id: 400,
@@ -59,8 +59,8 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description:" Contemporary on trend nail design.",
             options: [],
             filters: {
-                colors: ["pink", "white", "grey"],
-                collection: ["glitter", "gemstone", "marble"]
+                Colour: ["pink", "white", "grey"],
+                Collection: ["glitter", "gemstone", "marble"]
             }
         },{
             id: 500,
@@ -70,8 +70,8 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description: "",
             options: [],
             filters: {
-                colors: ["brown", "blue"],
-                collection: ["glitter", "gemstone"]
+                Colour: ["brown", "blue"],
+                Collection: ["glitter", "gemstone"]
             }
         },{
             id: 600,
@@ -81,8 +81,8 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description: "",
             options: [],
             filters: {
-                colors: ["pink"],
-                collection: ["glitter"]
+                Colour: ["pink"],
+                Collection: ["glitter"]
             }
         },{
             id: 700,
@@ -92,8 +92,8 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description: "",
             options: [],
             filters: {
-                colors: ["yellow"],
-                collection: ["summer"]
+                Colour: ["yellow"],
+                Collection: ["summer"]
             }
         },{
             id: 800,
@@ -103,8 +103,8 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description: "",
             options: [],
             filters: {
-                colors: ["brown"],
-                collection: ["glitter","gemstone"]
+                Colour: ["brown"],
+                Collection: ["glitter","gemstone"]
             }
         }
     ]

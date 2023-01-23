@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './ProductsMain.css';
 import '../ProductsLayout.css';
 import Products from "../../../../data/products";
-import ProductFilterContainer from "./ProductFilters";
+import {ProductFilterContainer, ProductViewAll, ProductSortBy } from "./ProductFilters";
 
 import { json } from "body-parser";
 
@@ -25,17 +25,29 @@ const ProductsMain = () => {
 		return <ProductCard prodAlt={item.alt} prodImage={imageSrc} prodName={item.name} index={index} key={index} prodId={item.id} />
 	})
 
+	const viewAll = () => {
+		return
+	}
+
+	const sortByAtoZ = () => {
+		return
+	}
+	
+	const optionSelect = () => {
+		return
+	}
+
 	return (
 		<section id="allproductspage" className="page longpage">
 			<div id="product-pg-container">
 				<h1>Press on Nails</h1>
 				<div id="filter-container" className="prod-container">
 
-					<div className="inline-view-all filter-item product-viewAll prod-child">
-						<Link to="/products" className="product-viewAll">View All</Link>
-					</div>
+					<ProductViewAll viewAll={viewAll}/>
 
-					<ProductFilterContainer />
+					<ProductSortBy sortByAtoZ={sortByAtoZ}/>
+
+					<ProductFilterContainer optionSelect={optionSelect}/>
 
 				</div>
 
