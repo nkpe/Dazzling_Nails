@@ -45,7 +45,7 @@ const filterData = allFilterTitles()
 
 
 
-const ProductFilters = ({ collectName, collectValues, optionSelect }) => {
+const ProductDataFilters = ({ filterName, filterValues, optionSelect }) => {
 
     const [selected, setSelected] = useState(0);
     console.log(selected)
@@ -53,10 +53,10 @@ const ProductFilters = ({ collectName, collectValues, optionSelect }) => {
         setSelected(e.target.value);
     }
     return (
-        <div id={`${collectName}-wrapper`}>
-            <select id={`${collectName}-filter`} className="filter-item prod-child" defaultValue={collectName} onChange={valueSelected}>
-                <option value={collectName}>{collectName}</option>
-                {Array.from(collectValues).map((value, index) => {
+        <div id={`${filterName}-wrapper`}>
+            <select id={`${filterName}-filter`} className="filter-item prod-child" defaultValue={filterName} onChange={valueSelected}>
+                <option value={filterName}>{filterName}</option>
+                {Array.from(filterValues).map((value, index) => {
                     return <option value={value} key={index} onClick={optionSelect}>{value}</option>
                 })}
             </select>
@@ -65,14 +65,15 @@ const ProductFilters = ({ collectName, collectValues, optionSelect }) => {
     )
 }
 
+// Generating any filters determined by Product data
 const ProductFilterContainer = ({ optionSelect }) => {
     return (
         <>
-            {filterData.map((collection, index) => {
-                let collectionName = Object.keys(collection)[0];
-                let collectionValues = collection[collectionName];
+            {filterData.map((filter, index) => {
+                let filterName = Object.keys(filter)[0];
+                let filterValues = filter[filterName];
 
-                return <ProductFilters collectName={collectionName} collectValues={collectionValues} key={index} optionSelect={optionSelect} />
+                return <ProductDataFilters filterName={filterName} filterValues={filterValues} key={index} optionSelect={optionSelect} />
             })}
         </>
     )
@@ -87,13 +88,51 @@ const ProductViewAll = ({ viewAll }) => {
     )
 }
 
-const ProductSortBy = ({ sortByAtoZ }) => {
+const ProductSortBy = ({ sortBy }) => {
     return (
-        <select id="sortby-filter" className="filter-item prod-child" defaultValue="sortby">
+        <select id="sortby-filter" className="filter-item prod-child" defaultValue="sortby" onChange={sortBy}>
             <option value="sortby">Sort By</option>
-            <option value="a-z" onClick={sortByAtoZ}>A-Z</option>
+            <option value="a-z">A-Z</option>
+            <option value="z-a">Z-A</option>
         </select>
     )
 }
 
-export { ProductFilterContainer, ProductViewAll, ProductSortBy };
+const FiltersContainer = () => {
+
+    const viewAll = () => {
+		return
+	}
+
+	const sortBy = ({value}) => {
+		setProdView(value);
+
+		console.dir(<ProductCard />);
+		console.log("Sort By working");
+
+		// Product Card component - get prodName and sort by. 
+		return
+	}
+	
+	const optionSelect = () => {
+		const productUpdate = () => {
+			
+		}
+
+		return
+	}
+    
+    return (
+        <div id="filter-container" className="prod-container">
+
+            <ProductViewAll viewAll={viewAll} />
+
+            <ProductSortBy sortBy={sortBy} />
+
+            <ProductFilterContainer optionSelect={optionSelect} />
+
+        </div>
+    )
+}
+
+export default FiltersContainer;
