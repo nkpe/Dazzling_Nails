@@ -8,13 +8,13 @@ import Products from "../../../../data/products";
 //stored in set to remove duplicates
 
 let allFilterTitles = () => {
+
     //filterCategories to create individual filter boxes
     let filterCats = new Set()
     let allFilters = [];
 
     //get all filter categories from 
     Products.forEach(el => {
-
         //productsFilter = array 
         //for each product, store filters object into an array. & then condense.
         let productsFilter = el.filters;
@@ -25,6 +25,7 @@ let allFilterTitles = () => {
     });
 
     let filterBtnData = [];
+    
     filterCats.forEach(el => {
         let values = new Set();
         for (let i = 0; i < allFilters.length; i++) {
@@ -48,10 +49,7 @@ const filterData = allFilterTitles()
 const ProductDataFilters = ({ filterName, filterValues, filterCallback }) => {
 
     const [selected, setSelected] = useState(0);
-    console.log(selected)
-    const valueSelected = (e) => {
-        setSelected(e.target.value);
-    }
+   
     return (
         <div id={`${filterName}-wrapper`}>
             <select id={`${filterName}-filter`} className="filter-item prod-child" defaultValue={filterName} onChange={filterCallback}>
@@ -82,8 +80,8 @@ const ProductFilterContainer = ({ filterCallback }) => {
 
 const ProductViewAll = ({ filterCallback }) => {
     return (
-        <div className="inline-view-all filter-item product-viewAll prod-child">
-            <Link id="view-all" to="/products" className="product-viewAll" onClick={ filterCallback }>View All</Link>
+        <div className="inline-view-all filter-item product-viewAll prod-child" onClick={ filterCallback }>
+            <Link to="/products" className="product-viewAll">View All</Link>
         </div>
     )
 }

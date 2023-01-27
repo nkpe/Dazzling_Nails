@@ -10,19 +10,21 @@ import ProductCardsContainer from "./ProductCardContainer";
 
 const ProductsMain = () => {
 	let [prodView, setProdView] = useState("a-z");
-	let [filter, setFilter] = useState("viewAll");
+	let [filter, setFilter] = useState("product-viewAll");
 
 	const filterCallback = (e) => {
 		let value = null;
-		console.log(e)
-		if (e.target.id === "view-all") {
-			value = "view-all"
+		// console.log(e)
+
+
+		if (e.target.className.includes("product-viewAll")) {
+			value = "product-viewAll";
 		} else {
-			value = e.target.value
+			value = e.target.value;
 		};
 
 		setProdView(value);
-		console.log("prodView", prodView)
+		// console.log("prodView", prodView);
 	}
 
 	return (

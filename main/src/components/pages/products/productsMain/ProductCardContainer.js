@@ -16,7 +16,7 @@ const ProductCardsContainer = ({ prodView, filter }) => {
     let eachProduct;
     
     const filterKnown = (value) => {
-        const valuesKnown = ["viewAll", "a-z", "z-a"];
+        const valuesKnown = ["product-viewAll", "a-z", "z-a"];
         return valuesKnown.includes(value);
     };
 
@@ -30,7 +30,7 @@ const ProductCardsContainer = ({ prodView, filter }) => {
         };
 
         switch (prodView) {
-            case ("viewAll"):
+            case ("product-viewAll"):
                 console.log("View all logic hit");
                 break;
             case ("a-z"):
@@ -42,7 +42,7 @@ const ProductCardsContainer = ({ prodView, filter }) => {
                 break;
         }
     } else {
-        console.log("custom filter logic")
+        console.log("custom filter logic");
         // Products.forEach((item) => {
         //     if (item.filters.filter.includes(prodView)) {
         //         eachProduct = document.getElementById(item.id);
