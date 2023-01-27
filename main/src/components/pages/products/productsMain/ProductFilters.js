@@ -45,7 +45,7 @@ const filterData = allFilterTitles()
 
 
 
-const ProductDataFilters = ({ filterName, filterValues, optionSelect }) => {
+const ProductDataFilters = ({ filterName, filterValues, filterCallback }) => {
 
     const [selected, setSelected] = useState(0);
     console.log(selected)
@@ -54,10 +54,10 @@ const ProductDataFilters = ({ filterName, filterValues, optionSelect }) => {
     }
     return (
         <div id={`${filterName}-wrapper`}>
-            <select id={`${filterName}-filter`} className="filter-item prod-child" defaultValue={filterName} onChange={valueSelected}>
+            <select id={`${filterName}-filter`} className="filter-item prod-child" defaultValue={filterName} onChange={filterCallback}>
                 <option value={filterName}>{filterName}</option>
                 {Array.from(filterValues).map((value, index) => {
-                    return <option value={value} key={index} onClick={optionSelect}>{value}</option>
+                    return <option value={value} key={index}>{value}</option>
                 })}
             </select>
         </div>
@@ -66,31 +66,31 @@ const ProductDataFilters = ({ filterName, filterValues, optionSelect }) => {
 }
 
 // Generating any filters determined by Product data
-const ProductFilterContainer = ({ optionSelect }) => {
+const ProductFilterContainer = ({ filterCallback }) => {
     return (
         <>
             {filterData.map((filter, index) => {
                 let filterName = Object.keys(filter)[0];
                 let filterValues = filter[filterName];
 
-                return <ProductDataFilters filterName={filterName} filterValues={filterValues} key={index} optionSelect={optionSelect} />
+                return <ProductDataFilters filterName={filterName} filterValues={filterValues} key={index} filterCallback={filterCallback} />
             })}
         </>
     )
 }
 
 
-const ProductViewAll = ({ viewAll }) => {
+const ProductViewAll = ({ filterCallback }) => {
     return (
         <div className="inline-view-all filter-item product-viewAll prod-child">
-            <Link to="/products" className="product-viewAll" onClick={viewAll}>View All</Link>
+            <Link id="view-all" to="/products" className="product-viewAll" onClick={ filterCallback }>View All</Link>
         </div>
     )
 }
 
-const ProductSortBy = ({ sortBy }) => {
+const ProductSortBy = ({ filterCallback }) => {
     return (
-        <select id="sortby-filter" className="filter-item prod-child" defaultValue="sortby" onChange={sortBy}>
+        <select id="sortby-filter" className="filter-item prod-child" defaultValue="sortby" onChange={filterCallback}>
             <option value="sortby">Sort By</option>
             <option value="a-z">A-Z</option>
             <option value="z-a">Z-A</option>
@@ -98,38 +98,16 @@ const ProductSortBy = ({ sortBy }) => {
     )
 }
 
-const FiltersContainer = () => {
-
-    const viewAll = () => {
-		return
-	}
-
-	const sortBy = ({value}) => {
-		setProdView(value);
-
-		console.dir(<ProductCard />);
-		console.log("Sort By working");
-
-		// Product Card component - get prodName and sort by. 
-		return
-	}
+const FiltersContainer = ({ filterCallback }) => {
 	
-	const optionSelect = () => {
-		const productUpdate = () => {
-			
-		}
-
-		return
-	}
-    
     return (
         <div id="filter-container" className="prod-container">
 
-            <ProductViewAll viewAll={viewAll} />
+            <ProductViewAll filterCallback={filterCallback} />
 
-            <ProductSortBy sortBy={sortBy} />
+            <ProductSortBy filterCallback={filterCallback} />
 
-            <ProductFilterContainer optionSelect={optionSelect} />
+            <ProductFilterContainer filterCallback={filterCallback} />
 
         </div>
     )

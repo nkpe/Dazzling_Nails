@@ -9,8 +9,21 @@ import ProductCardsContainer from "./ProductCardContainer";
 
 
 const ProductsMain = () => {
-	const [prodView, setProdView] = useState("a-z");
-	const [filter, setFilter] = useState("viewAll");
+	let [prodView, setProdView] = useState("a-z");
+	let [filter, setFilter] = useState("viewAll");
+
+	const filterCallback = (e) => {
+		let value = null;
+		console.log(e)
+		if (e.target.id === "view-all") {
+			value = "view-all"
+		} else {
+			value = e.target.value
+		};
+
+		setProdView(value);
+		console.log("prodView", prodView)
+	}
 
 	return (
 		<section id="allproductspage" className="page longpage">
@@ -22,7 +35,7 @@ const ProductsMain = () => {
 
 				{/* Callback to pass value from Filters up to 
 				this main component to update */}
-				<FiltersContainer />
+				<FiltersContainer filterCallback={filterCallback}/>
 
 				{/* Pass state value into the below to update
 				Product cards */}
