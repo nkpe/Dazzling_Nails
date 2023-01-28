@@ -10,21 +10,24 @@ import ProductCardsContainer from "./ProductCardContainer";
 
 const ProductsMain = () => {
 	let [prodView, setProdView] = useState("a-z");
-	let [filter, setFilter] = useState("product-viewAll");
+	let [filterName, setFilterName] = useState("product-viewAll");
 
 	const filterCallback = (e) => {
 		let value = null;
+		let filterValue = null;
+		let filterValueEnd = null;
 		// console.log(e)
-
-
 		if (e.target.className.includes("product-viewAll")) {
 			value = "product-viewAll";
+			filterValue = "product-viewAll";
 		} else {
 			value = e.target.value;
+			filterValue = e.target.id
+			filterValueEnd = (filterValue).slice(-filterValue.length, -7);
 		};
 
 		setProdView(value);
-		// console.log("prodView", prodView);
+		setFilterName(filterValueEnd);
 	}
 
 	return (
@@ -41,7 +44,7 @@ const ProductsMain = () => {
 
 				{/* Pass state value into the below to update
 				Product cards */}
-				<ProductCardsContainer prodView={prodView} filter={filter}/>
+				<ProductCardsContainer prodView={prodView} filterName={filterName}/>
 
 			</div>
 		</section>
