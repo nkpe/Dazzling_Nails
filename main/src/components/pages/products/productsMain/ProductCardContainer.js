@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import { Link, generatePath } from 'react-router-dom';
 import Products from "../../../../data/products";
 import { filterData } from "./ProductFilters";
 
 const ProductCard = ({ prodAlt, prodImage, prodName, index, prodId }) => {
     return (
-        <div className="product-item prod-child" key={index} id={prodId}>
-            <img src={prodImage} alt={prodAlt} />
-            <span className="product-label">{prodName}</span>
-        </div>
+        <Link to={generatePath("/products/:prodId", {prodId: prodId})}>
+            <div className="product-item prod-child" key={index} id={prodId}>
+                <img src={prodImage} alt={prodAlt} />
+                <span className="product-label">{prodName}</span>
+            </div>
+        </Link>
+
     )
 }
 

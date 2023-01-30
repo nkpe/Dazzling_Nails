@@ -36,17 +36,16 @@ export default function Home() {
                 <img src={sizeGuide} alt="Size Guide" />
             </Link>
 
-            <Link id="righthome" className="home-shape">
-                <a href="https://www.instagram.com/dazzlingnailsco/" target="_blank" rel="noopener noreferrer" id="toprighthome" className="blog-btn">
+            <Link to="/custom" id="righthome" className="home-shape">
                     <div id="toprighthome-text" className="home-text">Custom</div>
                     <img src={blog} alt="Blog" />
-                </a>
-
-                <div id="bottomrighthome" className="uniquesize-btn">
-                    <div id="bottomrighthome-text" className="home-text">SIZE GUIDE</div>
-                    <img src={sizeGuide} alt="Size Guide" />
-                </div>
             </Link>
+
+            <Link to="/unique-sizes" id="bottomrighthome" className="uniquesize-btn">
+                <div id="bottomrighthome-text" className="home-text">SIZE GUIDE</div>
+                <img src={sizeGuide} alt="Size Guide" />
+            </Link>
+
         </section>
     );
 }
