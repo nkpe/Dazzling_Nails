@@ -47,8 +47,6 @@ const filterData = allFilterTitles()
 
 
 const ProductDataFilters = ({ filterName, filterValues, filterCallback }) => {
-
-    const [selected, setSelected] = useState(0);
    
     return (
         <div id={`${filterName}-wrapper`}>
@@ -111,4 +109,4 @@ const FiltersContainer = ({ filterCallback }) => {
     )
 }
 
-export default FiltersContainer;
+export {FiltersContainer as default, filterData};

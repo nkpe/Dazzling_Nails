@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Products from "../../../../data/products";
+import { filterData } from "./ProductFilters";
 
 const ProductCard = ({ prodAlt, prodImage, prodName, index, prodId }) => {
     return (
@@ -10,7 +11,9 @@ const ProductCard = ({ prodAlt, prodImage, prodName, index, prodId }) => {
     )
 }
 
+
 const ProductCardsContainer = ({ prodView, filterName }) => {
+    let filteredProductsList = [];
 
     const filterKnown = (value) => {
         const valuesKnown = ["product-viewAll", "a-z", "z-a"];
@@ -19,39 +22,44 @@ const ProductCardsContainer = ({ prodView, filterName }) => {
 
     // format Products array, before doing .map
     const ProductsFiltered = () => {
-        let filteredProductsList = null;
-        if (filterKnown(prodView)) {
+        if (filterKnown(prodView) || prodView === filterName) {
+            switch (prodView) {
+                case ("z-a"):
+                    filteredProductsList = Products.sort((a, b) => -1 * a.name.localeCompare(b.name));
+                    break;
+                default:
+                    // view all Alphabetically
+                    filteredProductsList = Products.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+            }
+        } else {
+            console.log("filterName", filterName);
 
-        switch (prodView) {
-            case ("a-z"):
-            case("product-viewAll"):
-                console.log("a-z hit" )
-                filteredProductsList = Products.sort((a,b) => a.name.localeCompare(b.name));
-                break;
-            case ("z-a"):
-                filteredProductsList = Products.sort((a,b) => -1 * a.name.localeCompare(b.name));
-                break;
-        }
-    } else {
-        console.log("filterName", filterName)
-     
-    }
-    // RenderProducts(filteredProductsList)
-    ;}
+            filteredProductsList = Products.filter((item) => {
+                let itemFilters = Object.keys(item.filters);
+                if (itemFilters.includes(filterName)) {
+                    let itemFilterProps = item.filters[filterName];
+                    if (itemFilterProps.includes(prodView)) {
+                        return item
+                    }
+                }
+            });
 
-    // const RenderProducts = (list) => {
-    //     list.map((item, index) => {
-    //         //Access image object stored in Products	
-    //         let imageImport = Object.keys(item.image)[0];
-    //         let imageSrc = item.image[imageImport];
 
-    //         return <ProductCard prodAlt={item.alt} prodImage={imageSrc} prodName={item.name} index={index} key={index} prodId={item.id} />
-    //     })
-    // }
+        };
+    };
+    ProductsFiltered();
+
 
     return (
-        <div id="product-cards-container" className="prod-container" >
-            <ProductsFiltered />
+        <div id="product-cards-container" className="prod-container">
+            {filteredProductsList.map((item, index) => {
+                //Access image object stored in Products	
+                let imageImport = Object.keys(item.image)[0];
+                let imageSrc = item.image[imageImport];
+
+                return <ProductCard prodAlt={item.alt} prodImage={imageSrc} prodName={item.name} index={index} key={index} prodId={item.id} />
+            })}
         </div>
     )
 }

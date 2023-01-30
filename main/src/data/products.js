@@ -70,7 +70,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
             description: "",
             options: [],
             filters: {
-                Colour: ["brown", "blue"],
+                Colour: ["brown", "green"],
                 Collection: ["glitter", "gemstone"]
             }
         },{
