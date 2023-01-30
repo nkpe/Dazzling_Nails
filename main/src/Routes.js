@@ -23,13 +23,14 @@ const router = createBrowserRouter(
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="collections" element={<Collections />} />
-            <Route path="products" element={<ProductsMain />}>
-                <Route loader={({ params }) => { params.prodId }}
-                    action={({ params }) => { params.prodId }}
-                    element={<ProductPageMain />}
-
+            <Route path="products">
+                <Route path="" element={<ProductsMain />} />
+                <Route path=":prodId"
+                element={<ProductPageMain />}
+                loader={({ params }) => { return ProductPageMain(params.prodId) }}
                 />
             </Route>
+            
             <Route path="unique-sizes" element={<UniqueSizes />} />
             <Route path="aftercare" element={<Aftercare />} />
             <Route path="contact" element={<Contact />} />
