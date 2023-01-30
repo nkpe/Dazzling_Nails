@@ -19,7 +19,7 @@ import toneGreySandImg from '../images/products/two_tone_grey_sand.jpg';
  let Products = [
         {
             id: 100,
-            name:" Dazzling Red",
+            name: "Dazzling Red",
             image: {dazzSquImg},
             alt: "Red glittery nails with gemstones in square shape",
             description: "These sophisticated nails are bold and glamorous, perfect for formal events or a night out.",
