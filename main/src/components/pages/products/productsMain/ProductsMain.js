@@ -16,7 +16,6 @@ const ProductsMain = () => {
 		let value = null;
 		let filterValue = null;
 		let filterValueEnd = null;
-		// console.log(e)
 		if (e.target.className.includes("product-viewAll")) {
 			value = "product-viewAll";
 			filterValue = "product-viewAll";

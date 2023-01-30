@@ -33,8 +33,6 @@ const ProductCardsContainer = ({ prodView, filterName }) => {
                     break;
             }
         } else {
-            console.log("filterName", filterName);
-
             filteredProductsList = Products.filter((item) => {
                 let itemFilters = Object.keys(item.filters);
                 if (itemFilters.includes(filterName)) {
