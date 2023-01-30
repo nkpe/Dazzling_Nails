@@ -57,8 +57,8 @@ const ProductCardsContainer = ({ prodView, filterName }) => {
         <div id="product-cards-container" className="prod-container">
             {filteredProductsList.map((item, index) => {
                 //Access image object stored in Products	
-                let imageImport = Object.keys(item.image)[0];
-                let imageSrc = item.image[imageImport];
+                let imageKeyImport = Object.keys(item.image)[0];
+                let imageSrc = item.image[imageKeyImport];
 
                 return <ProductCard prodAlt={item.alt} prodImage={imageSrc} prodName={item.name} index={index} key={index} prodId={item.id} />
             })}

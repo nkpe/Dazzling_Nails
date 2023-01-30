@@ -27,7 +27,7 @@ const router = createBrowserRouter(
                 <Route path="" element={<ProductsMain />} />
                 <Route path=":prodId"
                 element={<ProductPageMain />}
-                loader={({ params }) => { return ProductPageMain(params.prodId) }}
+                loader={({ params }) => { return params.prodId }}
                 />
             </Route>
             
