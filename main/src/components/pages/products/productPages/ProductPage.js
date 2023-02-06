@@ -19,7 +19,7 @@ const ProductPageMain = () => {
             <div id="prod-pg-content">
                 <h1>{product.name}</h1>
                 <p id="prod-descrip">{product.description}</p>
-                <Link to="/contact">Enquire Now</Link>
+                <Link className='enquire-btn' to="/contact">Enquire Now</Link>
             </div>
         </div>
 
