@@ -1,26 +1,14 @@
-a {
-  color: black;
-}
-
-li {
-  list-style: none;
-}
-
-#page-container {
-  position: relative;
-  min-height: calc(100vh - 100px);
-  top: 0;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+/* Page styles */
+main {
+  min-height: calc(100% - 100px);
   overflow: hidden;
 }
 
-#page-container #mob-nav {
+main #mob-nav {
   display: none;
 }
 
-#page-container .mob-search-full {
+main .mob-search-full {
   background: pink;
   width: 95%;
   opacity: 80%;
