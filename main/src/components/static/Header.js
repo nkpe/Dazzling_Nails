@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './Header.css';
@@ -6,27 +6,19 @@ import logo from '../../../src/images/logo.png';
 
 import { NavBar, MobNavBarIcon } from './NavBar';
 
-const Nav = () => {
-    const [screenMobile, setScreenMobile] = useState(null);
-
-    const screenUpdate = () => {
-        window.innerWidth <= 450 ? setScreenMobile(true) : setScreenMobile(false);
-    }
-
-    window.addEventListener('resize', screenUpdate)
-
-    if (screenMobile) {
+const Nav = ({screenMob}) => {
+    if (screenMob) {
         return <MobNavBarIcon />
     } else {
         return <NavBar />
     }
 }
 
-const Header = () => {
+const Header = ({screenMob}) => {
 
     return (
         <header>
-            <Nav />
+            <Nav screenMob={screenMob}/>
 
             <div id="cont-logo" className="topbar">
                 <Link to="/home" id="logo-link">

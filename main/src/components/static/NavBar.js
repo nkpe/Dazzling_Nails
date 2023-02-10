@@ -22,8 +22,13 @@ const MobNavBar = () => {
 }
 
 const MobNavBarIcon = () => {
+
+    const showNavDropDown = () => {
+        return <MobNavBar />
+    }
+
     return (
-        <div id="mob-nav-button">
+        <div id="mob-nav-button" onClick={showNavDropDown}>
     &#47;&#47;&#47;
     </div>
     )
