@@ -10,6 +10,11 @@ a {
   color: black;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
+
 li {
   list-style: none;
 }

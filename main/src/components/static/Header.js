@@ -1,44 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Header.css';
 import logo from '../../../src/images/logo.png';
 
-import { Link } from 'react-router-dom';
+import { NavBar, MobNavBarIcon } from './NavBar';
 
-const mobNav = () => {
-    return (
-        <aside id="mob-nav">
-				<div id="mob-search" className="mob-search-full">
-					<i id="mob-search-icon" className="fas fa-search"></i>
-					<input className="mob-search-full" type="text" placeholder="" />
-				</div>
+const Nav = () => {
+    const [screenMobile, setScreenMobile] = useState(null);
 
-				<Link to="/about" id="mob-info-btn" className="nav-button info-btn">About</Link>
+    const screenUpdate = () => {
+        window.innerWidth <= 450 ? setScreenMobile(true) : setScreenMobile(false);
+    }
 
-				<Link to="/collections" id="mob-collections-btn" className="nav-button collections-btn">Collections</Link>
+    window.addEventListener('resize', screenUpdate)
 
-				<Link to="/unique-sizes" id="mob-design-btn" className="nav-button design-btn">Custom</Link>
-
-				<Link to="/aftercare" id="mob-care-btn" className="nav-button care-btn">Aftercare</Link>
-			</aside>
-    )
+    if (screenMobile) {
+        return <MobNavBarIcon />
+    } else {
+        return <NavBar />
+    }
 }
 
 const Header = () => {
+
     return (
         <header>
-            <nav>
-                <ul>
-                    <Link to="/about" className="nav-button info-btn">About</Link>
-                    <div className="nav-divider">/</div>
-                    <Link to="collections" className="nav-button collections-btn">Collections</Link>
-                    <div className="nav-divider">/</div>
-                    <Link to="unique-sizes" className="nav-button design-btn">Custom</Link>
-                    <div className="nav-divider">/</div>
-                    <Link to="aftercare" className="nav-button care-btn">Aftercare</Link>
-                </ul>
-            </nav>
-
-            <div id="mob-nav-button">///</div>
+            <Nav />
 
             <div id="cont-logo" className="topbar">
                 <Link to="/home" id="logo-link">
@@ -51,4 +39,4 @@ const Header = () => {
 
 
 export default Header;
-export {mobNav};
+// export {mobNav};
