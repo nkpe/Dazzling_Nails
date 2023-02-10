@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <main id="page-container">
+      <main>
         <Outlet />
       </main>
       <Footer />
