@@ -1,3 +1,8 @@
+:root {
+  --padding-edge: 10px;
+  --box-sizing: border-box;
+}
+
 body {
   margin: 0;
   height: 100%;

@@ -20,11 +20,9 @@ const Header = ({screenMob}) => {
         <header>
             <Nav screenMob={screenMob}/>
 
-            <div id="cont-logo" className="topbar">
-                <Link to="/home" id="logo-link">
-                    <img src={logo} alt="Dazzling Nails Co logo" />
-                </Link>
-            </div>
+            <Link to="/home" id="logo-link">
+                <img src={logo} alt="Dazzling Nails Co logo" />
+            </Link>
         </header>
     );
 }

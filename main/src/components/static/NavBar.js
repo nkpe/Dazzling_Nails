@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom'
+
+import './NavBar.css';
 
 const MobNavBar = () => {
     return (
@@ -10,13 +11,13 @@ const MobNavBar = () => {
                 <input className="mob-search-full" type="text" placeholder="" />
             </div>
 
-            <Link to="/about" id="mob-info-btn" className="nav-button info-btn">About</Link>
+            <Link to="/about" id="mob-info-btn" className="nav-link info-btn">About</Link>
 
-            <Link to="/collections" id="mob-collections-btn" className="nav-button collections-btn">Collections</Link>
+            <Link to="/collections" id="mob-collections-btn" className="nav-link collections-btn">Collections</Link>
 
-            <Link to="/unique-sizes" id="mob-design-btn" className="nav-button design-btn">Custom</Link>
+            <Link to="/unique-sizes" id="mob-design-btn" className="nav-link design-btn">Custom</Link>
 
-            <Link to="/aftercare" id="mob-care-btn" className="nav-button care-btn">Aftercare</Link>
+            <Link to="/aftercare" id="mob-care-btn" className="nav-link care-btn">Aftercare</Link>
         </aside>
     )
 }
@@ -24,30 +25,29 @@ const MobNavBar = () => {
 const MobNavBarIcon = () => {
 
     const showNavDropDown = () => {
+
         return <MobNavBar />
     }
 
     return (
-        <div id="mob-nav-button" onClick={showNavDropDown}>
-    &#47;&#47;&#47;
-    </div>
+        <div id="mob-nav-link" onClick={showNavDropDown}>
+            &#47;&#47;&#47;
+        </div>
     )
 }
 
 const NavBar = () => {
     return (
         <nav>
-            <ul>
-                <Link to="/about" className="nav-button info-btn">About</Link>
-                <div className="nav-divider">/</div>
-                <Link to="collections" className="nav-button collections-btn">Collections</Link>
-                <div className="nav-divider">/</div>
-                <Link to="unique-sizes" className="nav-button design-btn">Custom</Link>
-                <div className="nav-divider">/</div>
-                <Link to="aftercare" className="nav-button care-btn">Aftercare</Link>
-            </ul>
+            <Link to="/about" className="nav-link info-btn">About</Link>
+            <div className="nav-divider">/</div>
+            <Link to="collections" className="nav-link collections-btn">Collections</Link>
+            <div className="nav-divider">/</div>
+            <Link to="unique-sizes" className="nav-link design-btn">Custom</Link>
+            <div className="nav-divider">/</div>
+            <Link to="aftercare" className="nav-link care-btn">Aftercare</Link>
         </nav>
     )
 }
 
-export {NavBar, MobNavBarIcon}
+export { NavBar, MobNavBarIcon }

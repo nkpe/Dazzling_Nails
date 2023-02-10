@@ -1,60 +1,36 @@
 header {
     height: 100px;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    padding-left: var(--padding-edge);
+    padding-right: var(--padding-edge);
+    box-sizing: border-box;
 }
 
 /* Logo */
-#cont-logo,
 #logo-link {
-    height: 80px;
+    height: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-#cont-logo #logo-link img {
-    height: 185%;
+#logo-link img {
+    height: 150%;
     z-index: 1;
 }
 
-#cont-logo #logo-link img:hover {
+#logo-link img:hover {
     cursor: pointer;
 }
 
-/* Navbar */
-header nav {
-    display: block;
-    position: relative;
-    width: 38%;
-    z-index: 1000;
-}
-
-header nav ul {
-    font-size: 120%;
-    list-style-type: none;
-    margin-block-end: 0;
-    margin-block-start: 0;
-    padding-inline-start: 30px;
-    width: auto;
-    float: left;
-}
-
-.nav-button {
-    display: inline-block !important;
-}
-
-.nav-button:hover {
-    cursor: pointer;
-}
-
-.nav-divider {
-    display: inline-block;
-}
 
 @media screen and (max-width: 450px) {
     header {
-        justify-content: center;
+        display: flex;
+        justify-content: space-between;
     }
 }
